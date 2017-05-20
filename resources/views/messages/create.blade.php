@@ -2,12 +2,14 @@
 
 @section('content')
 
-    <h1>メッセージ新規作成ページ</h1>
+    <h1>新しいタスク</h1>
 
     {!! Form::model($message, ['route' => 'messages.store']) !!}
 
-        {!! Form::label('content', 'メッセージ:') !!}
+        {!! Form::label('content', 'タスク:') !!}
         {!! Form::text('content') !!}
+        {!! Form::label('content', '詳細:') !!}
+        {!! Form::text('details') !!}
 
         {!! Form::submit('投稿') !!}
 
